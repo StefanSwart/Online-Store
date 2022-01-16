@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Served Safely</title>
+    <!-- the follorwing two links enables me to use bootstrap in this file -->
+    <!-- bootsrap css -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <!-- bootstrap javascript -->
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- the following is my external stylesheet which will override any bootstrap because it is placed below the bootstrap in the document -->
+
+    <link rel="stylesheet" href="../css/styles.css" />
+
+  </head>
+  <body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-custom-d">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Served Safely</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" aria-current="page" href="../index.html"
+              >Home</a
+            >
+            <a class="nav-link" href="../catalogue/catalogue.html">Menu</a>
+            <a class="nav-link" href="../delivery/delivery.html">Delivery</a>
+            <a class="nav-link" href="../Login/login.html">Login</a>
+            <a class="nav-link" href="../shopping_cart/cart.html">Cart</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- use of grid system to define the layout of the page.  -->
+    <div class="container-fluid">
+      <!-- I couldnt get my content to center in the grid because I did not add in a div with the class row. After reading through the documentation: https://getbootstrap.com/docs/4.1/layout/grid/ . I added in the div and it fixed the problem.  -->
+      <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8" id="mainContainer">
+          <!-- According to bootstrap documentation the .img-thumbnail class just gives images a rounded 1px border appearance:  https://getbootstrap.com/docs/4.4/content/images/#image-thumbnails-->
+          <!-- All images are royalty free and from https://unsplash.com/ -->
+          <!-- bootstap uses the .img-fluid class to make images responsive. This gives images max-width:100%, and max-height:auto; allowing images to scale with the website: https://getbootstrap.com/docs/4.4/content/images/#responsive-images -->
+          <table class="table table-hover">
+            <thead>
+              <tr class="text-center">
+                <!-- I learned how to make the heading span 4 columns by looking at the source code of example.html  -->
+                <th colspan="4"><h1>Menu</h1></th>
+              </tr>
+            </thead>
+            <!-- In order the get my images to the correct size while staying responsive. I created my own classes similar to bootstrap. 
+            this link helped me : https://getbootstrap.com/docs/4.0/utilities/sizing/ -->
+            <!-- This link helped me get different image shapes: https://www.w3schools.com/bootstrap/bootstrap_images.asp -->
+            <tbody>
+              <tr>
+                <th scope="row" class="w-10"><h2 class="categoryHeading">Starters</h2></th>
+                <td class="w-30 shadow-sm">
+                  <h2 class="itemHeading">Butternut Soup</h2>
+                  <a href="../item_pages/butternut.html"><img
+                    src="../images/catalogue/starters/butternut_soup.jfif"
+                    alt="Food Image"
+                    class="img-thumbnail img-fluid itemImage"
+                  /></a>
+                  <!-- This link helped me understand how to use the button value -->
+                  <button class="quickAddButton" value="0" onclick="quickAdd(this.value)">quick add to cart</button>
+                </td>
+                <td class="w-30 shadow-sm">
+                  <h2 class="itemHeading">Calamari</h2>
+                  <a href="../item_pages/calamari.html"><img
+                    src="../images/catalogue/starters/calamari.jfif"
+                    alt="Food Image"
+                    class="img-thumbnail img-fluid itemImage"
+                  /></a>
+                  <button class="quickAddButton" value="1" onclick="quickAdd(this.value)" >quick add to cart</button>
+                </td>
+                <td class="w-30 shadow-sm">
+                  <h2 class="itemHeading">Garlic Bread</h2>
+                  <a href="../item_pages/garlic.html"><img
+                    src="../images/catalogue/starters/garlic_bread.jfif"
+                    alt="Food Image"
+                    class="img-thumbnail img-fluid itemImage"
+                  /></a>
+                  <button class="quickAddButton" value="2" onclick="quickAdd(this.value)">quick add to cart</button>
+                </td>
+              </tr>
+
+              <tr>
+                <th scope="row" class="w-10"><h2 class="categoryHeading">Mains</h2></th>
+                <td class="w-30 shadow-sm">
+                  <h2 class="itemHeading">Ribs & Chips</h2>
+                  <a href="../item_pages/ribs.html"><img
+                    src="../images/catalogue/mains/ribs.jfif"
+                    alt="Food Image"
+                    class="img-thumbnail img-fluid itemImage"
+                  /></a>
+                  <button class="quickAddButton" value="3" onclick="quickAdd(this.value)">quick add to cart</button>
+                </td>
+                <td class="w-30 shadow-sm">
+                  <h2 class="itemHeading">Steak & Chips</h2>
+                  <a href="../item_pages/steak.html"><img
+                    src="../images/catalogue/mains/steak.jfif"
+                    alt="Food Image"
+                    class="img-thumbnail img-fluid itemImage"
+                  /></a>
+                  <button class="quickAddButton" value="4" onclick="quickAdd(this.value)">quick add to cart</button>
+                </td>
+                <td class="w-30 shadow-sm">
+                  <h2 class="itemHeading">Sushi</h2>
+                  <a href="../item_pages/sushi.html"><img
+                    src="../images/catalogue/mains/sushi_plate.jfif"
+                    alt="Food Image"
+                    class="img-thumbnail img-fluid itemImage"
+                  /></a>
+                  <button class="quickAddButton" value="5" onclick="quickAdd(this.value)">quick add to cart</button>
+                </td>
+              </tr>
+
+                <tr>
+                <th scope="row" class="w-10"><h2 class="categoryHeading">Deserts</h2></th>
+                <td class="w-30 shadow-sm">
+                  <h2 class="itemHeading">Ice Cream Cup</h2>
+                  <a href="../item_pages/Ice_cream.html"><img
+                    src="../images/catalogue/deserts/ice_cream.jfif"
+                    alt="Food Image"
+                    class="img-thumbnail img-fluid itemImage"
+                  /></a>
+                  <button class="quickAddButton" value="6" onclick="quickAdd(this.value)">quick add to cart</button>
+                </td>
+                <td class="w-30 shadow-sm">
+                  <h2 class="itemHeading">Mini Donut Bowl</h2>
+                  <a href="../item_pages/donut.html"><img
+                    src="../images/catalogue/deserts/mini_donut_bowl.jfif"
+                    alt="Food Image"
+                    class="img-thumbnail img-fluid itemImage"
+                  /></a>
+                  <button class="quickAddButton" value="7" onclick="quickAdd(this.value)">quick add to cart</button>
+                </td>
+                <td class="w-30 shadow-sm">
+                  <h2 class="itemHeading">Waffle & Ice Cream</h2>
+                  <a href="../item_pages/waffle.html"><img
+                    src="../images/catalogue/deserts/waffle.jfif"
+                    alt="Food Image"
+                    class="img-thumbnail img-fluid itemImage"
+                  /></a>
+                  <button class="quickAddButton" value="8" onclick="quickAdd(this.value)">quick add to cart</button>
+                </td>
+              </tr>
+              
+
+
+          <!-- this link is where i learned the syntax for a horizontal: form https://getbootstrap.com/docs/4.0/components/forms/#horizontal-form -->
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+    <script src="../javascript/app.js"></script>
+  </body>
+</html>

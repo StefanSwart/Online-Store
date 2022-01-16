@@ -1,0 +1,326 @@
+.widthTest {
+  width: 500px;
+  color: aliceblue;
+}
+
+.setHeight {
+  height: 100vh;
+}
+
+.customContainer {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verticalCenter {
+  margin: 0;
+}
+
+/* This link helped me with the background image : https://www.w3schools.com/cssref/pr_background-image.asp */
+/* The following two ID's also act as a color filter to two images as specified in the instructions */
+#homepage {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.788),
+      rgba(128, 128, 128, 0.8)
+    ),
+    url(../images/landing_page/foodbg.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* added in height 100vh because the background gradient would not take up the entire page but only the height  of the content on the page */
+  height: 100vh;
+}
+
+/* #deliveryPage is the same as #homepage but with a different image and added background position */
+#deliveryPage {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 0, 0, 0),
+      rgba(22, 22, 21, 0.8)
+    ),
+    url(../images/delivery/orange_bike.jfif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.landingText {
+  color: rgb(49, 30, 7);
+  font-family: "Playfair Display", serif;
+}
+
+.headingSize {
+  font-size: 50px;
+}
+
+.secondHeadingStyle {
+  font-size: 35px;
+  font-style: oblique;
+}
+
+/* this is my own custom background class that is a similar format to a bootstrap class */
+/* .bg-custom-l = background custom landing */
+.bg-custom-l {
+  background-color: rgba(126, 83, 83, 0.8);
+  /* background-color: rgb(27, 16, 16); */
+}
+
+/* .bg-custom-d = background custom delivery */
+.bg-custom-d {
+  background-color: rgba(126, 112, 83, 0.95);
+}
+
+/* I learned the transform tanslate syntax from centering things.pdf. In order to position the paragraph next to the motorcyle I changed the two values until i got the desired result. */
+.deliveryNote {
+  width: 500px;
+  font-size: x-large;
+  color: rgb(224, 212, 199);
+  font-family: "Playfair Display", serif;
+  transform: translate(-50%, 0);
+}
+
+/* the following styles are for the catalogue page */
+/* The following two classes define the elements size relative to its parent container. */
+.w-30 {
+  width: 30%;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+#mainContainer {
+  background-color: rgb(231, 229, 221);
+  /* height: 100vh; */
+}
+
+.categoryHeading {
+  color: rgba(126, 112, 83, 0.95);
+}
+
+.itemHeading {
+  font-size: 1.5em;
+  color: rgba(65, 56, 39, 0.95);
+}
+
+td,
+th {
+  border: 3px solid rgba(126, 112, 83, 0.384);
+  padding: 5px;
+}
+/* this class adds padding to all images as required in the task */
+.itemImage {
+  padding: 2px;
+  background-color: rgba(126, 112, 83, 0.384);
+}
+
+/* this link helped me with image enlarge class https://stackoverflow.com/questions/39912843/bootstrap-table-popover-thumbnailhover */
+.itemImage:hover {
+  /* position relative means that the enlarged image will be placed relative to its inital position */
+  position: relative;
+  transform: translate(-15%, -15%);
+  transform: scale(1.1);
+  height: auto;
+  display: block;
+  /* z-index ensures that the image is placed above all other images when enlarged */
+  z-index: 999;
+  cursor: pointer;
+}
+
+.landingList {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  list-style-type: none;
+}
+
+.landingList a {
+  text-decoration: none;
+  color: rgb(63, 40, 11);
+  border: 1px solid;
+  border-radius: 50px;
+  padding: 0 10px;
+}
+
+.landingList a:hover {
+  text-decoration: none;
+  color: rgb(194, 113, 14);
+  background-color: rgba(128, 128, 128, 0.253);
+}
+
+.footer {
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+#footerDot {
+  color: rgb(148, 98, 38);
+}
+
+.footer a {
+  text-decoration: none;
+  color: rgb(105, 64, 14);
+}
+
+.footer a:hover {
+  color: rgb(209, 156, 91);
+}
+
+.center {
+  margin-top: 28vh;
+}
+
+#loginForm {
+  margin: 0 auto;
+  padding: 10px;
+  width: 370px;
+  height: auto;
+  background: rgba(238, 128, 38, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(54, 45, 5, 0.2);
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 600px) {
+  .center {
+    margin-top: 5vh;
+  }
+}
+
+q {
+  font-style: italic;
+}
+
+.loginHeading {
+  font-size: 2.5rem;
+  color: rgb(179, 104, 14);
+  font-family: "Playfair Display", serif;
+}
+
+.myButton {
+  background-color: rgb(9, 129, 9);
+  border: black;
+}
+
+.myButton:hover {
+  background-color: rgb(194, 194, 14);
+}
+
+.pageImage {
+  width: 75%;
+}
+
+/* Shopping Cart Styles */
+
+.summaryContainer {
+  height: auto;
+  min-height: 150px;
+  width:95%;
+  background-color: rgba(201, 188, 164, 0.95);
+  margin: 5px;
+  padding: 10px;
+}
+
+.cartItem {
+  height:150px;
+  /* width:100%; */
+  background-color: rgba(201, 188, 164, 0.95);
+  margin: 5px;
+  display: flex;
+  padding: 10px;
+}
+
+.cartImage {
+  height: 130px;
+  width:182.5px;
+  margin-right: 10px;
+}
+
+.itemDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  padding:0;
+  width: 100%;
+  height:100%
+}
+
+.cartHeading {
+  color: rgb(49, 30, 7);
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+}
+
+.cartHeading2 {
+  font-size: 1.5em;
+  color: rgb(49, 30, 7);
+  font-size: 25px;
+}
+
+.removeButton {
+  background-color: rgba(255, 0, 0, 0);
+  border: none;
+  width: 25px;
+  height: 25px;
+  font-weight:600;
+  border-radius: 5px;
+}
+
+.removeButton:hover {
+  background-color: rgba(129, 100, 66, 0.5);
+}
+
+.headingFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.orderButton {
+  color: rgb(63, 40, 11);
+  background-color: rgba(252, 250, 248, 0.5);
+  border: 1px solid;
+  border-radius: 50px;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+.cartList {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+}
+
+.quickAddButton {
+  color: rgb(63, 40, 11);
+  background-color: rgba(252, 250, 248, 0.5);
+  border: 1px solid;
+  border-radius: 50px;
+  padding: 0 10px;
+  margin-top: 2%;
+  margin-bottom:1%;
+}
+
+.quickAddButton:hover {
+  color: rgb(185, 106, 9);
+  background-color: rgb(252, 250, 248);
+  border: 1px solid;
+  border-radius: 50px;
+  padding: 0 10px;
+}
+
+.clearButton {
+    color: rgb(63, 40, 11);
+    background-color: rgba(252, 250, 248, 0.5);
+    border: 1px solid;
+    border-radius: 50px;
+    padding: 0 10px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+
